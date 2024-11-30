@@ -1,1 +1,154 @@
-<p>Mostrar Educação referente a reciclagem</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Ambiental e Reciclagem</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin-top: 60px; /* For fixed navbar */
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        
+        .navbar-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar-menu li {
+            margin: 0 10px;
+        }
+
+        
+        .container {
+            width: 95%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-screen {
+            text-align: center;
+        }
+        
+        .game-screen h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .game-option {
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .game-option h3 {
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        
+        .video-container {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#desafios">Desafios</a></li>
+            <li><a href="#pontuacao">Pontuação</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="game-screen">
+            <h2>Educação Ambiental e Reciclagem</h2>
+
+            <p>A reciclagem é fundamental para a preservação do meio ambiente. Ela ajuda a reduzir a quantidade de resíduos nos aterros sanitários, economiza recursos naturais e energia, e diminui a poluição do ar e da água. Além disso, a reciclagem contribui para a criação de empregos e promove a sustentabilidade, garantindo um futuro melhor para as próximas gerações.</p>
+            <div class="game-option">
+                <h3>Vídeos Indicados</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JbjlyC_r0Nw" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/sfa-jnXtA84" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="game-option">
+                <h3>Dados sobre Reciclagem</h3>
+                <table>
+                    <tr>
+                        <th>Material</th>
+                        <th>Tempo de Decomposição</th>
+                    </tr>
+                    <tr>
+                        <td>Papel</td>
+                        <td>2-6 semanas</td>
+                    </tr>
+                    <tr>
+                        <td>Metal</td>
+                        <td>200 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Plástico</td>
+                        <td>450 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Vidro</td>
+                        <td>1 milhão de anos</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="game-option">
+                <h3>Curiosidades</h3>
+                <ul>
+                    <li>Mais de 8 milhões de toneladas de plástico são descartadas nos oceanos todos os anos.</li>
+                    <li>O lixo eletrônico é o tipo de resíduo que mais cresce no mundo.</li>
+                    <li>Menos de 20% do lixo eletrônico é reciclado globalmente.</li>
+                    <li>Os aterros sanitários são uma das maiores fontes de metano, um gás de efeito estufa potente.</li>
+                    <li>O plástico pode liberar substâncias químicas tóxicas no solo e na água.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
