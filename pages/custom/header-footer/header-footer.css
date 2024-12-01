@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-dark); /* Usando a variável */
+    height: 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--secondary-color); /* Usando a variável */
+    font-size: 18px;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color-dark); /* Usando a variável */
+    height: 8%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer button {
+    background: none;
+    border: none;
+    color: var(--secondary-color); /* Usando a variável */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--primary-color-dark); /* Usando a variável */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1100;
+    animation: slideIn 0.3s ease;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    margin: 15px 0;
+}
+
+.menu-lateral ul li a {
+    color: var(--secondary-color); /* Usando a variável */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-lateral.active {
+    display: block;
+}
+
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: var(--secondary-color); /* Usando a variável */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
