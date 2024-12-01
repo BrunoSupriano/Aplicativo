@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Progresso e Dados</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .progress-bar-container {
+            background-color: #ccc;
+            width: 90%;
+            height: 30px;
+            margin: 20px auto; /* Distância do topo */
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .progress-bar {
+            background-color: #4caf50;
+            height: 100%;
+            width: 50%; /* Progresso fictício */
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+        .progress-label {
+            padding-top: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+            color:  #57b88b;
+        }
+        .content {
+            margin-top: 60px; /* Espaço para a barra de progresso */
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .section .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .section .row span {
+            font-weight: bold;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-label">Barra de Progresso</div>
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+ 
+    <div class="content">
+        <h1>Histórico de Pontos</h1>
+        
+        <!-- Seção 1 -->
+        <div class="section">
+            <div class="row">
+                <span>Data:</span>
+                <div>01/12/2024</div>
+            </div>
+            <div class="row">
+                <span>Tipo de Lixo:</span>
+                <div>Plástico</div>
+            </div>
+            <div class="row">
+                <span>Pontos Acumulados:</span>
+                <div>10</div>
+            </div>
+        </div>
+
+        <!-- Seção 2 -->
+        <div class="section">
+            <div class="row">
+                <span>Data:</span>
+                <div>30/11/2024</div>
+            </div>
+            <div class="row">
+                <span>Tipo de Lixo:</span>
+                <div>Papel</div>
+            </div>
+            <div class="row">
+                <span>Pontos Acumulados:</span>
+                <div>5</div>
+            </div>
+        </div>
+
+        <!-- Seção 3 -->
+        <div class="section">
+            <div class="row">
+                <span>Data:</span>
+                <div>29/11/2024</div>
+            </div>
+            <div class="row">
+                <span>Tipo de Lixo:</span>
+                <div>Metal</div>
+            </div>
+            <div class="row">
+                <span>Pontos Acumulados:</span>
+                <div>15</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
