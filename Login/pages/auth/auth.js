@@ -76,6 +76,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     // Lógica de autenticação fictícia
     if (cpf === "teste" && password === "teste") {
         alert("Login realizado com sucesso!");
+        window.location.href = "../../../Balanca/Balanca.html";
         // Aqui você pode redirecionar para a tela principal ou dashboard
     } else {
         alert("CPF ou senha inválidos.");
