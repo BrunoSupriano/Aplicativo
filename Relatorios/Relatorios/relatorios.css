@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
 }
+
 .header {
     background-color: #57b88b;
     color: white;
@@ -11,6 +12,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .content {
     margin: 20px;
     padding: 20px;
@@ -18,37 +20,44 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .filters {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .filters input, .filters button {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .filters button {
     background-color: #4caf50;
     color: white;
     border: none;
     cursor: pointer;
 }
+
 .filters button:hover {
     background-color: #45a049;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 th, td {
     border: 1px solid #ddd;
     text-align: left;
     padding: 10px;
 }
+
 th {
     background-color: #57b88b;
     color: white;
@@ -56,9 +65,11 @@ th {
     top: 0;
     z-index: 2;
 }
+
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
 .export-btn {
     float: right;
     margin-top: 10px;
@@ -69,6 +80,7 @@ tr:nth-child(even) {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .export-btn:hover {
     background-color: #0056b3;
 }

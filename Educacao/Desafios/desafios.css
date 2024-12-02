@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: #f0f0f0;
 }
+
 .navbar {
     position: fixed;
     top: 0;
@@ -37,27 +38,33 @@ body {
     background-color: #fff;
     overflow-x: auto;
 }
+
 .game-screen {
     text-align: center;
 }
+
 .game-options {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .game-option {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .game-option .emoji {
     font-size: 50px;
 }
+
 th, td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
 @media (max-width: 600px) {
     th, td {
         padding: 8px;
