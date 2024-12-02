@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Dados</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./relatorios.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Relatório Administrativo</h1>
+        <p>Monitoramento de Dados de Resíduos</p>
+    </div>
+    <div class="content">
+        <div class="filters">
+            <div>
+                <label for="search">Filtrar por Data:</label>
+                <input type="date" id="search">
+            </div>
+            <button>Filtrar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nome</th>
+                    <th>Tipo de Lixo</th>
+                    <th>Pontos Acumulados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/12/2024</td>
+                    <td>João Silva</td>
+                    <td>Plástico</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>30/11/2024</td>
+                    <td>Maria Oliveira</td>
+                    <td>Papel</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>29/11/2024</td>
+                    <td>Carlos Santos</td>
+                    <td>Metal</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="export-btn">Exportar Dados</button>
+    </div>
+</body>
+</html>
