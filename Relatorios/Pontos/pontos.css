@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.progress-bar-container {
+    background-color: #ccc;
+    width: 90%;
+    height: 30px;
+    margin: 20px auto; /* Distância do topo */
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    width: 50%; /* Progresso fictício */
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+.progress-label {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    color:  #57b88b;
+}
+.content {
+    margin-top: 60px; /* Espaço para a barra de progresso */
+    padding: 20px;
+}
+.section {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+.section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.section .row span {
+    font-weight: bold;
+}
+.section:last-child {
+    margin-bottom: 0;
+}
