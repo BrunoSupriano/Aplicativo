@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
-<link rel="stylesheet" href="header-footer.css">
 <body>
     <header>
-        <h1>Menu</h1>
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <button onclick="toggleMenu()">☰</button>
+        <h1>Gerenciamento de Reciclagem</h1>
     </header>
     
     <div class="menu-lateral" id="menuLateral">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
         <ul>
-            <li><a href="#">Relatórios de Administração</a></li>
-            <li><a href="#">Histórico de Pontos</a></li>
+            <li class="menu-item">
+                <a href="../../Home/page/home.html" >🏠 Home</a>
+            </li>
+            <li class="menu-item">
+                <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">🧑‍🏫 Educação </a>
+                <ul class="submenu">
+                    <li><a href="../../Educacao/Educacao/educacao.html">🌱 Curiosidades</a></li>
+                    <li><a href="../../Educacao/Desafios/desafios.html">🎯 Desafios</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">⚖️ Relatórios</a>
+                <ul class="submenu">
+                    <li><a href="../../Relatorios/Pontos/pontos.html">🕑 Histórico de Pontos</a></li>
+                    <li><a href="../../Relatorios/Relatorios/relatorios.html">📄 Relatório de Pesagem</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
     
+    
+    
     <footer>
-        <button onclick="toggleDeposits()">⚖️</button> <!-- Ação do ícone -->
-        <button>🎯</button>
-        <button>🌱</button>
+        <div>
+            <p>Acesso Rápido</p>
+            <div class="footer-buttons">
+                <button ><a href="../../Educacao/Educacao/educacao.html">🌱 Educação</a></button>
+                <button ><a href="../../Relatorios/Relatorios/relatorios.html">⚖️ Relatórios</a></button>
+                <button ><a href="../../Educacao/Desafios/desafios.html">🎯 Jogos</a></button>
+            </div>
+        </div>
     </footer>
-    
-    <span class="login-icon">🔑</span>
-    
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menuLateral');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
