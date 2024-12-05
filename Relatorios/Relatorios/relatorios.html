@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Dados</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="./relatorios.css">
+    <link rel="stylesheet" href="../../Home/elements/header-footer.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="relatorios.css">
 </head>
 <body>
-    <div class="header">
+    <header>
+        <button onclick="toggleMenu()">☰</button>
         <h1>Relatório Administrativo</h1>
-        <p>Monitoramento de Dados de Resíduos</p>
+    </header>
+    <div class="menu-lateral" id="menuLateral">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li class="menu-item">
+                <a href="../../Home/page/home.html" >🏠 Home</a>
+            </li>
+            <li class="menu-item">
+                <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">🧑‍🏫 Educação </a>
+                <ul class="submenu">
+                    <li><a href="../../Educacao/Educacao/educacao.html">🌱 Curiosidades</a></li>
+                    <li><a href="../../Educacao/Desafios/desafios.html">🎯 Desafios</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">⚖️ Relatórios</a>
+                <ul class="submenu">
+                    <li><a href="../../Relatorios/Pontos/pontos.html">🕑 Histórico de Pontos</a></li>
+                    <li><a href="../../Relatorios/Relatorios/relatorios.html">📄 Relatório de Pesagem</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="header">
     </div>
     <div class="content">
+        <h4 style="text-align: center;">Monitoramento de Dados de Resíduos</h4>
         <div class="filters">
             <div>
                 <label for="search">Filtrar por Data:</label>
@@ -56,5 +82,21 @@
         </table>
         <button class="export-btn">Exportar Dados</button>
     </div>
+    <footer>
+        <div>
+            <p>Acesso Rápido</p>
+            <div class="footer-buttons">
+                <button ><a href="../../Educacao/Educacao/educacao.html">🌱 Educação</a></button>
+                <button ><a href="../../Relatorios/Relatorios/relatorios.html">⚖️ Relatórios</a></button>
+                <button ><a href="../../Educacao/Desafios/desafios.html">🎯 Jogos</a></button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menuLateral');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

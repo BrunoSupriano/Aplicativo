@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integração de Balanças</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../Home/elements/header-footer.css">
     <link rel="stylesheet" href="desafios.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
-<nav class="navbar">
-    <ul class="navbar-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#desafios">Desafios</a></li>
-        <li><a href="#pontuacao">Pontuação</a></li>
-        <li><a href="#perfil">Perfil</a></li>
+<header>
+    <button onclick="toggleMenu()">☰</button>
+    <h1>Gerenciamento de Reciclagem</h1>
+</header>
+<div class="menu-lateral" id="menuLateral">
+    <button class="close-button" onclick="toggleMenu()">✖</button>
+    <ul>
+        <li class="menu-item">
+            <a href="../../Home/page/home.html" >🏠 Home</a>
+        </li>
+        <li class="menu-item">
+            <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">🧑‍🏫 Educação </a>
+            <ul class="submenu">
+                <li><a href="../../Educacao/Educacao/educacao.html">🌱 Curiosidades</a></li>
+                <li><a href="../../Educacao/Desafios/desafios.html">🎯 Desafios</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">⚖️ Relatórios</a>
+            <ul class="submenu">
+                <li><a href="../../Relatorios/Pontos/pontos.html">🕑 Histórico de Pontos</a></li>
+                <li><a href="../../Relatorios/Relatorios/relatorios.html">📄 Relatório de Pesagem</a></li>
+            </ul>
+        </li>
     </ul>
-</nav>
+</div>
 <body>
     <div class="container">
         <div class="game-screen">
@@ -37,4 +56,20 @@
         </div>
     </div>
 </body>
+<footer>
+    <div>
+        <p>Acesso Rápido</p>
+        <div class="footer-buttons">
+            <button ><a href="../../Educacao/Educacao/educacao.html">🌱 Educação</a></button>
+            <button ><a href="../../Relatorios/Relatorios/relatorios.html">⚖️ Relatórios</a></button>
+            <button ><a href="../../Educacao/Desafios/desafios.html">🎯 Jogos</a></button>
+        </div>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menuLateral');
+        menu.classList.toggle('active');
+    }
+</script>
 </html>
