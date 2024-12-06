@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Administrador - Aplicativo de Reciclagem</title>
+    <link rel="stylesheet" href="../../Home/elements/header-footer.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="relatorios.css">
+    
+    <style>
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .info-card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .info-card h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+    </style>
+</head>
+<header>
+    <button onclick="toggleMenu()">☰</button>
+    <h1>Dashboard</h1>
+</header>
+
+<div class="menu-lateral" id="menuLateral">
+    <button class="close-button" onclick="toggleMenu()">✖</button>
+    <ul>
+        <li class="menu-item">
+            <a href="./Home admin.html" >🏠 Home</a>
+        </li> 
+        <li class="menu-item">
+            <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">🎯Relatorios </a>
+            <ul class="submenu">
+                <li><a href="./Dashboard.html">📈 Dashboard</a></li>
+                <li><a href="./Gestão de Contribuintes.html">💰 Contribuintes</a></li>
+                <li><a href="./Relatorios Gerenciais.html">📄 Relatorio Gerencial</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="header">
+</div>
+<body>
+    <div class="container">
+        <!-- Seção Relatórios -->
+        <section id="relatorios" class="info-card">
+            <h3>Relatórios</h3>
+            <p><a href="./Relatorios Gerenciais.html" style="color: #4CAF50;">Acesse os relatórios completos</a> sobre a reciclagem
+                em sua região.</p>
+        </section>
+
+        <!-- Seção Total de Lixo Reciclado -->
+        <section id="dados" class="info-card">
+            <h3>Total de Lixo Reciclado</h3>
+            <p><strong>Papel:</strong> 500 kg</p>
+            <p><strong>Plástico:</strong> 300 kg</p>
+            <p><strong>Vidro:</strong> 200 kg</p>
+            <p><strong>Metal:</strong> 150 kg</p>
+            <p><strong>Total:</strong> 1.150 kg</p>
+        </section>
+
+        <!-- Seção Engajamento da População -->
+        <section id="engajamento" class="info-card">
+            <h3>Engajamento da População</h3>
+            <p>Usuários registrados no aplicativo: <strong>1.200</strong></p>
+            <p>Usuários que participaram da reciclagem: <strong>850</strong></p>
+            <p>Índice de engajamento: <strong>70.8%</strong></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gerenciador de Reciclagem. Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menuLateral');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</html>

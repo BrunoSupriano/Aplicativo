@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Reciclagem - Aplicativo de Reciclagem</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../../Home/elements/header-footer.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="relatorios.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin-top: 60px; /* Espaço para o menu fixo */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .navbar-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin: 0 10px;
+        }
+
+        .navbar-menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar-menu li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        canvas {
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <button onclick="toggleMenu()">☰</button>
+        <h1>Dashboard</h1>
+    </header>
+    <div class="menu-lateral" id="menuLateral">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li class="menu-item">
+                <a href="./Home admin.html" >🏠 Home</a>
+            </li> 
+            <li class="menu-item">
+                <a style="background-color: white; border-radius:10px; color: #57b88b; font-style:unset; font-weight: bold;">🎯Relatorios </a>
+                <ul class="submenu">
+                    <li><a href="./Dashboard.html">📈 Dashboard</a></li>
+                    <li><a href="./Gestão de Contribuintes.html">💰 Contribuintes</a></li>
+                    <li><a href="./Relatorios Gerenciais.html">📄 Relatorio Gerencial</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="header">
+    </div>
+
+    <div class="container">
+        <h2>Análises de Dados</h2>
+
+        <div class="chart-container">
+            <canvas id="chartTotalReciclado"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chartEngajamento"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chartPorPeriodo"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gerenciador de Reciclagem. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menuLateral');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <script>
+        // Gráfico de Total de Lixo Reciclado
+        const ctxTotalReciclado = document.getElementById('chartTotalReciclado').getContext('2d');
+        new Chart(ctxTotalReciclado, {
+            type: 'bar',
+            data: {
+                labels: ['Papel', 'Plástico', 'Vidro', 'Metal'],
+                datasets: [{
+                    label: 'Quantidade (kg)',
+                    data: [500, 300, 200, 150],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#03A9F4', '#FF5722']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Engajamento
+        const ctxEngajamento = document.getElementById('chartEngajamento').getContext('2d');
+        new Chart(ctxEngajamento, {
+            type: 'doughnut',
+            data: {
+                labels: ['Participantes', 'Não Participantes'],
+                datasets: [{
+                    data: [850, 350],
+                    backgroundColor: ['#4CAF50', '#FFC107']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Coleta por Período
+        const ctxPorPeriodo = document.getElementById('chartPorPeriodo').getContext('2d');
+        new Chart(ctxPorPeriodo, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                datasets: [
+                    {
+                        label: 'Papel',
+                        data: [120, 150, 130, 170, 200],
+                        borderColor: '#4CAF50',
+                        fill: false
+                    },
+                    {
+                        label: 'Plástico',
+                        data: [80, 100, 90, 110, 140],
+                        borderColor: '#FFC107',
+                        fill: false
+                    },
+                    {
+                        label: 'Vidro',
+                        data: [60, 70, 65, 80, 100],
+                        borderColor: '#03A9F4',
+                        fill: false
+                    },
+                    {
+                        label: 'Metal',
+                        data: [50, 60, 55, 70, 85],
+                        borderColor: '#FF5722',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
