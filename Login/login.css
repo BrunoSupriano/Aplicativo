@@ -1,101 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #00796b;
-    margin-bottom: 20px;
-  }
-  
-  .input-wrapper {
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 14px 10px;
-    margin-top: 10px;
-    border: 1px solid #00796b;
-    border-radius: 4px;
-    font-size: 14px;
-    position: relative;
-    transition: padding-top 0.2s ease-in-out;
-  }
-  
-  /* Label inicial como placeholder dentro do input */
-  label {
-    position: absolute;
-    left: 10px;
-    top: 23px; /* Posição inicial do label dentro do campo */
-    font-size: 14px;
-    color: #00796b;
-    transition: all 0.2s ease-in-out;
-    pointer-events: none;
-  }
-  
-  /* Quando o input está em foco ou preenchido, o label sobe */
-  input:focus {
-    padding-top: 20px;
-  }
-  
-  input:focus + label{
-    top: 10px; /* Move o label para cima */
-    font-size: 12px; /* Reduz o tamanho da fonte do label */
-    color: #004d40; /* Cor mais escura para o texto flutuante */
-  }
-  
-  /* Diminuir o tamanho do texto digitado do usuário */
-  input:focus,
-  input:not(:placeholder-shown) {
-    font-size: 12px; /* Reduz o tamanho do texto digitado */
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #004d40;
-  }
-  
-  a {
-    display: block;
-    text-align: center;
-    color: #00796b;
-    margin-top: 10px;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 10px;
+  margin-top: 10px;
+  border: 1px solid #00796b;
+  border-radius: 4px;
+  font-size: 14px;
+  position: relative;
+  transition: padding-top 0.2s ease-in-out;
+}
+
+/* Label inicial como placeholder dentro do input */
+label {
+  position: absolute;
+  left: 10px;
+  top: 23px; /* Posição inicial do label dentro do campo */
+  font-size: 14px;
+  color: #00796b;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+/* Quando o input está em foco ou preenchido, o label sobe */
+input:focus {
+  padding-top: 20px;
+}
+
+input:focus + label {
+  top: 10px; /* Move o label para cima */
+  font-size: 12px; /* Reduz o tamanho da fonte do label */
+  color: #4eae83; /* Cor mais escura para o texto flutuante */
+}
+
+/* Diminuir o tamanho do texto digitado do usuário */
+input:focus,
+input:not(:placeholder-shown) {
+  font-size: 12px; /* Reduz o tamanho do texto digitado */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4eae83;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4eae83;
+}
+
+a {
+  display: block;
+  text-align: center;
+  color: #00796b;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox personalizado encapsulado */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Oculta o checkbox padrão */
+.checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo do ícone de check */
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  content: '\2713'; /* Símbolo de check */
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  left: 0.5vh;
+  top: 0px;
+  font-weight: bold;
+}
+
+/* Checkbox marcado com cor de fundo */
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background-color: #4eae83;
+  border-color: #4eae83;
+}
+
+/* Estilo para o texto */
+.checkbox-wrapper label {
+  cursor: pointer;
+  color: #333;
+}
